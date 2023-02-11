@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Formulário de cadastro para vagas." />
+    <title>Exércicio 1</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="exercicio1.js"></script>
+  </head>
+
+  <body>
+    <div class="alert" hidden></div>
+    <form onsubmit="return validar(event)" novalidate action="https://www.google.com/">
+      <input type="text" name="nome" placeholder="Nome" id="nome" required/>
+
+      <input type="email" name="email" placeholder="E-mail" id="email" required />
+
+      <select id="cargos" required>
+        <option value="" disabled selected  hidden>Cargo</option>
+        <option value="Analista de Software">Analista de Software</option>
+        <option value="Atendente">Atendente</option>
+        <option value="Designer">Designer</option>
+        <option value="Gerente">Gerente</option>
+        <option value="Programador">Programador</option>
+      </select>
+
+      <textarea
+        name="mensagem"
+        placeholder="Mensagem"
+        rows="6"
+        id="mensagem" minlength="10" required
+      ></textarea>
+
+      <input
+        class="cadastro"
+        type="submit"
+        name="cadastrar"
+        value="Cadastrar"
+      />
+    </form>
+  </body>
+</html>
